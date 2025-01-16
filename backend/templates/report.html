@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 25px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bolder;
+            color: crimson;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .content h2 {
+            font-size: 20px;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .metric span {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #eeeeee;
+            margin-top: 20px;
+        }
+        .footer p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Monthly Report - Aug 2024</h1>
+        </div>
+
+        <div class="content">
+            <h2>Dear {{ sponsor.name }},</h2>
+            <br>
+            <p>
+                We are pleased to share with you the monthly performance report for the campaigns run during Aug 2024. Below you'll find an overview of the key metrics and achievements.
+            </p>
+            <br>
+            <h2>Campaign Overview</h2>
+            <br>
+            <div class="metric">
+                <span>Total Number of Campaigns : </span> <span>{{ campaigns_count }}</span>
+            </div>
+            <div class="metric">
+                <span>Total Number of Ad Requests : </span> <span>{{ adrequests_count }}</span>
+            </div>
+            <div class="metric">
+                <span>Total Budget Spent : </span> <span>{{ total_budget }}</span>
+            </div>
+            <div class="metric">
+                <span>Accepted Requests : </span> <span>{{ accepted_adrequests_count }}</span>
+            </div>
+            <div class="metric">
+                <span>Rejected Requests : </span> <span>{{ rejected_adrequests_count }}</span>
+            </div>
+            <div class="metric">
+                <span>Pending Requests : </span> <span>{{ pending_adrequests_count }}</span>
+            </div>
+            <div class="metric">
+                <span>Completed Requests : </span> <span>{{ completed_adrequests_count }}</span>
+            </div>
+            <br>
+            <h2>Next Steps</h2>
+            <br>
+            <p>
+                We recommend reviewing the results and considering adjustments to optimize the remaining campaigns. Please reach out if you have any questions or need further details.
+            </p>
+
+        </div>
+
+        <div class="footer">
+            <p>
+                Thank you for your continued partnership.<br>
+                Best regards,<br>
+                Influencer Engagement & Sponsorship Coordination Platform
+            </p>
+        </div>
+    </div>
+</body>
+</html>
