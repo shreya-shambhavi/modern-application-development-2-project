@@ -1,0 +1,11 @@
+/* Vanilla CSS */
+
+#app {
+    padding: 0;
+    margin: 0;
+}
+
+router-view {
+    padding: 0;
+    margin: 0;
+}
